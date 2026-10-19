@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/ui/Card';
+import Counter from './components/ui/Counter';
+import Form from './components/ui/Form';
+import List from './components/ui/List';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="app">
+      <Card name="Renz M Montana" description="Sir tara takbo???" />
+      <Form />
+      <Counter />
+      <List />
+    </main>
   );
 }
 
