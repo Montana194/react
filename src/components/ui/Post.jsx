@@ -87,20 +87,7 @@ export default function Post() {
                 </form>
             </div>
 
-            <div className="post-feed-list">
-                {posts.length > 0 ? (
-                    posts.map((post) => (
-                        <PostCard
-                            key={post.id}
-                            post={post}
-                        />
-                    ))
-                ) : (
-                    <div className="post-empty-state">
-                        No posts shared yet.
-                    </div>
-                )}
-            </div>
+            
         </div>
     );
 }
