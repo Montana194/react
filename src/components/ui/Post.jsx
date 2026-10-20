@@ -75,11 +75,32 @@ export default function Post() {
                         </div>
                     )}
 
-                    
+                    <div className="post-footer">
+                        <button
+                            type="submit"
+                            className="post-submit-btn"
+                            disabled={processing || !message.trim()}
+                        >
+                            {processing ? 'Posting...' : 'Post'}
+                        </button>
+                    </div>
                 </form>
             </div>
 
-          
+            <div className="post-feed-list">
+                {posts.length > 0 ? (
+                    posts.map((post) => (
+                        <PostCard
+                            key={post.id}
+                            post={post}
+                        />
+                    ))
+                ) : (
+                    <div className="post-empty-state">
+                        No posts shared yet.
+                    </div>
+                )}
+            </div>
         </div>
     );
 }
